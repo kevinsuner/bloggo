@@ -117,7 +117,7 @@ The most important part is that each commit messages should have a title/subject
 Most title/subjects should have a lower-cased prefix with a colon and one whitespace. The prefix can be:
 - The name of the package where (most of) the changes are made (e.g. `parse: Add RawTitle to metadata struct`)
 - If the commit touches several packages with a common functional topic, use that as a prefix (e.g. `errors: Resolve correct line numbers`)
-- If the commit touches several packages with a common functional topic, prefix with `all:` (e.g. `all: Reformat go code`)
+- If the commit touches several packages without a common functional topic, prefix with `all:` (e.g. `all: Reformat go code`)
 - If this is a documentation update, prefix with (e.g. `docs:`)
 - If nothing of the above applies, just leave the prefix out
 
