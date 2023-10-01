@@ -24,7 +24,7 @@ func newGenerator(baseURL, themeDir string) *generator {
 	return &generator{
 		baseURL:      baseURL,
 		themeDir:     themeDir,
-		canonicalURL: fmt.Sprintf("%s/%s/%s", baseURL, "public", "index.html"),
+		canonicalURL: fmt.Sprintf("%s/%s", baseURL, "index.html"),
 		partialsDir:  fmt.Sprintf("%s/%s/%s", THEMES_DIR, themeDir, "partials"),
 	}
 }
@@ -62,7 +62,7 @@ func (g *generator) index(limit int) error {
 				Keywords:      metadata.Keywords,
 				Author:        metadata.Author,
 				PublishedTime: metadata.PublishedTime,
-				URL:           template.URL(g.setURL("public", "posts", filename)),
+				URL:           template.URL(g.setURL("posts", "", filename)),
 			})
 		}
 	}
@@ -99,7 +99,7 @@ func (g *generator) index(limit int) error {
 				Meta:         metadata,
 				BaseURL:      template.URL(g.baseURL),
 				CanonicalURL: template.URL(g.canonicalURL),
-				OGURL:        template.URL(g.setURL("public", "", filename)),
+				OGURL:        template.URL(g.setURL("", "", filename)),
 			},
 			Content: template.HTML(buf.String()),
 			Posts:   posts,
@@ -149,7 +149,7 @@ func (g *generator) page(name string) error {
 				Meta:         metadata,
 				BaseURL:      template.URL(g.baseURL),
 				CanonicalURL: template.URL(g.canonicalURL),
-				OGURL:        template.URL(g.setURL("public", "", filename)),
+				OGURL:        template.URL(g.setURL("", "", filename)),
 			},
 			Content: template.HTML(buf.String()),
 		},
@@ -201,7 +201,7 @@ func (g *generator) archive() error {
 			Keywords:      metadata.Keywords,
 			Author:        metadata.Author,
 			PublishedTime: metadata.PublishedTime,
-			URL:           template.URL(g.setURL("public", "posts", filename)),
+			URL:           template.URL(g.setURL("posts", "", filename)),
 		})
 	}
 
@@ -259,7 +259,7 @@ func (g *generator) archive() error {
 				Meta:         metadata,
 				BaseURL:      template.URL(g.baseURL),
 				CanonicalURL: template.URL(g.canonicalURL),
-				OGURL:        template.URL(g.setURL("public", "", filename)),
+				OGURL:        template.URL(g.setURL("", "", filename)),
 			},
 			Content: template.HTML(buf.String()),
 			Archive: archive,
@@ -315,7 +315,7 @@ func (g *generator) posts() error {
 					Meta:         metadata,
 					BaseURL:      template.URL(g.baseURL),
 					CanonicalURL: template.URL(g.canonicalURL),
-					OGURL:        template.URL(g.setURL("public", "posts", filename)),
+					OGURL:        template.URL(g.setURL("posts", "", filename)),
 				},
 				Content: template.HTML(buf.String()),
 			},
@@ -337,20 +337,28 @@ func (g *generator) posts() error {
 }
 
 func (g *generator) setURL(folder, subfolder, filename string) string {
-	if subfolder != "" {
+	if folder != "" {
+		if subfolder != "" {
+			return fmt.Sprintf(
+				"%s/%s/%s/%s",
+				g.baseURL,
+				folder,
+				subfolder,
+				fmt.Sprintf("%s.html", filename),
+			)
+		}
+
 		return fmt.Sprintf(
-			"%s/%s/%s/%s",
+			"%s/%s/%s",
 			g.baseURL,
 			folder,
-			subfolder,
 			fmt.Sprintf("%s.html", filename),
 		)
 	}
 
 	return fmt.Sprintf(
-		"%s/%s/%s",
+		"%s/%s",
 		g.baseURL,
-		folder,
 		fmt.Sprintf("%s.html", filename),
 	)
 }
