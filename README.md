@@ -44,7 +44,7 @@ The following parameters can be used when executing the bloggo binary.
 
 | Name | Default | Required | Usage | Description |
 | -------- | ----------------------- | ----- | ---------------------------------- | ---------------------------------------- |
-| base-url | `http://127.0.0.1:5500` | False | `--base-url=http://127.0.0.1:5500` | The base URL used in meta-tags and links |
+| base-url | `http://127.0.0.1:5500/public` | False | `--base-url=http://127.0.0.1:5500/public` | The base URL used in meta-tags and links |
 | theme | `bloggo` | False | `--theme=bloggo` | The theme used across the site |
 | limit | `10` | False | `--limit=10` | The limit of articles shown in the homepage |
 | serve | `false` | False | `--serve` | Preview of the site using a server with Fiber |
