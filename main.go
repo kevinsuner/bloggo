@@ -27,7 +27,7 @@ func main() {
 	var limit int
 	var serve bool
 
-	flag.StringVar(&baseURL, "base-url", "http://127.0.0.1:5500", "--base-url=http://127.0.0.1:5500")
+	flag.StringVar(&baseURL, "base-url", "http://127.0.0.1:5500/public", "--base-url=http://127.0.0.1:5500/public")
 	flag.StringVar(&themeDir, "theme", "bloggo", "--theme=bloggo")
 	flag.IntVar(&limit, "limit", 10, "--limit=10")
 	flag.BoolVar(&serve, "serve", false, "--serve")
@@ -66,12 +66,8 @@ func main() {
 		app.Static("/public/assets", "./public/assets")
 		app.Static("/public/css", "./public/css")
 		app.Static("/public/posts", "./public/posts")
-		if err := app.Listen(
-			fmt.Sprintf(
-				":%s",
-				strings.SplitAfterN(baseURL, ":", -1)[2],
-			),
-		); err != nil {
+		port, _, _ := strings.Cut(strings.SplitAfterN(baseURL, ":", -1)[2], "/")
+		if err := app.Listen(fmt.Sprintf(":%s", port)); err != nil {
 			log.Fatalf("%s: %v", "failed to start server", err)
 		}
 	}
