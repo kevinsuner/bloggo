@@ -30,7 +30,7 @@ Sed rhoncus tincidunt diam, non aliquam lorem tincidunt vel. In ut dignissim nul
 5. Etiam accumsan augue eu nunc porta
 
 ## Nullam tortor
-![Waterfall. October 1961, Litograph](/public/assets/2.jpg)
+![Waterfall. October 1961, Litograph](/assets/2.jpg)
 
 ### Duis vel porttitor leo viverra
 Nulla sapien ex, maximus quis erat non, feugiat convallis lectus. Cras placerat dictum nisi, non pulvinar leo vulputate sit amet. Fusce sagittis sollicitudin euismod. Vestibulum lorem enim, hendrerit sed consectetur at, elementum vitae risus. Phasellus ac est vitae lacus euismod ultricies vitae sit amet diam. Praesent iaculis arcu libero, id iaculis ipsum iaculis luctus. Etiam dictum iaculis diam ut consectetur. Duis interdum dolor at lobortis vehicula. Nunc consectetur vulputate malesuada. Vestibulum et suscipit lorem, nec ultricies massa. **In consequat lacus eu laoreet vehicula**. Phasellus id massa est. Fusce eget pretium magna, nec ornare sapien. Nam sit amet ultricies urna. Etiam consequat tristique arcu, eget vulputate tellus sagittis vitae.
