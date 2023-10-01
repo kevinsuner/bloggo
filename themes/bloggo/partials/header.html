@@ -14,22 +14,22 @@
         <meta property="og:url" content="{{.Header.OGURL}}" />
         <meta property="og:title" content="{{.Header.Meta.Title}}" />
         <meta property="og:description" content="{{.Header.Meta.Description}}" />
-        <meta property="og:image" content="{{.Header.BaseURL}}/public/assets/cover.png"/>
+        <meta property="og:image" content="{{.Header.BaseURL}}/assets/cover.png"/>
         <meta name="twitter:title" content="{{.Header.Meta.Title}}"/>
         <meta name="twitter:description" content="{{.Header.Meta.Description}}"/>
         <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:image" content="{{.Header.BaseURL}}/public/assets/cover.png"/>
+        <meta name="twitter:image" content="{{.Header.BaseURL}}/assets/cover.png"/>
         {{if eq .Header.Meta.OGType "article"}}
         <meta property="article:section" content="{{.Header.Meta.Section}}">
         <meta property="article:published_time" content="{{.Header.Meta.PublishedTime}}"/>
         <meta property="article:modified_time" content="{{.Header.Meta.ModifiedTime}}"/>
         {{end}}
         <link rel="canonical" href="{{.Header.CanonicalURL}}">
-        <link rel="stylesheet" href="{{.Header.BaseURL}}/public/css/pico.css">
-        <link rel="stylesheet" href="{{.Header.BaseURL}}/public/css/style.css">
-        <link rel="icon" href="{{.Header.BaseURL}}/public/assets/favicon.ico">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{.Header.BaseURL}}/public/assets/favicon-32x32.png">
-        <link rel="apple-touch-icon" href="{{.Header.BaseURL}}/public/assets/apple-touch-icon.png">
+        <link rel="stylesheet" href="{{.Header.BaseURL}}/css/pico.css">
+        <link rel="stylesheet" href="{{.Header.BaseURL}}/css/style.css">
+        <link rel="icon" href="{{.Header.BaseURL}}/assets/favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{.Header.BaseURL}}/assets/favicon-32x32.png">
+        <link rel="apple-touch-icon" href="{{.Header.BaseURL}}/assets/apple-touch-icon.png">
         <script>
             window.onload = () => {
                 var toggle = document.getElementById("theme-toggle");
