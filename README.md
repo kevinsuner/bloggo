@@ -6,7 +6,7 @@ Bloggo is a simplistic [static site generator](https://en.wikipedia.org/wiki/Sta
 
 [![Go Version](https://img.shields.io/github/go-mod/go-version/itsksrof/bloggo)](https://github.com/itsksrof/bloggo/blob/master/go.mod)
 [![Pagespeed Insights](https://img.shields.io/badge/pagespeed-insights-green)](https://pagespeed.web.dev/report?url=https://itsksrof.github.io/bloggo/)
-[![Github License](https://img.shields.io/github/license/itsksrof/bloggo)](https://github.com/itsksrof/bloggo/blob/master/LICENSE.md)
+[![License](https://img.shields.io/github/license/itsksrof/bloggo)](https://github.com/itsksrof/bloggo/blob/master/LICENSE)
 
 ---
 
