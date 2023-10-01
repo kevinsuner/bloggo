@@ -33,10 +33,10 @@ Pellentesque quis rutrum velit. Etiam odio ipsum, scelerisque a nunc eu, blandit
 You can use the following syntax to include an image. Path of the image should be relative to the `public` folder.
 
 ```markdown
-![Matterhorn](/assets/1.jpg)
+![Matterhorn](/bloggo/assets/1.jpg)
 ```
 
-![Matterhorn](/assets/1.jpg)
+![Matterhorn](/bloggo/assets/1.jpg)
 
 You can also include images from external sources.
 
