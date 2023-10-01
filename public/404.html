@@ -1,0 +1,69 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="robots" content="noindex, nofollow">
+        <meta name="keywords" content="bloggo, go, golang, ssg, markdown, frontmatter, simple, minimalist">
+        <meta name="description" content="Oopsie daisy seems like the page you&#39;re looking for doesn&#39;t exist.">
+        <meta name="author" content="itsksrof">
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://127.0.0.1:5500/public/404.html" />
+        <meta property="og:title" content="Not Found | Bloggo" />
+        <meta property="og:description" content="Oopsie daisy seems like the page you&#39;re looking for doesn&#39;t exist." />
+        <meta property="og:image" content="http://127.0.0.1:5500/public/assets/cover.png"/>
+        <meta name="twitter:title" content="Not Found | Bloggo"/>
+        <meta name="twitter:description" content="Oopsie daisy seems like the page you&#39;re looking for doesn&#39;t exist."/>
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:image" content="http://127.0.0.1:5500/public/assets/cover.png"/>
+        
+        <link rel="canonical" href="http://127.0.0.1:5500/public/index.html">
+        <link rel="stylesheet" href="http://127.0.0.1:5500/public/css/pico.css">
+        <link rel="stylesheet" href="http://127.0.0.1:5500/public/css/style.css">
+        <link rel="icon" href="http://127.0.0.1:5500/public/assets/favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="http://127.0.0.1:5500/public/assets/favicon-32x32.png">
+        <link rel="apple-touch-icon" href="http://127.0.0.1:5500/public/assets/apple-touch-icon.png">
+        <script>
+            window.onload = () => {
+                var toggle = document.getElementById("theme-toggle");
+                var storedTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+                var storedIcon = localStorage.getItem("theme-icon") || (storedTheme === "dark" ? "☀️" : "🌙");
+                if (storedTheme) {
+                    document.documentElement.setAttribute("data-theme", storedTheme);
+                    toggle.innerHTML = storedIcon;
+                }
+
+                toggle.onclick = function() {
+                    var currentTheme = document.documentElement.getAttribute("data-theme");
+                    var targetTheme = "light";
+                    var targetIcon = "🌙";
+
+                    if (currentTheme === "light") {
+                        targetTheme = "dark";
+                        targetIcon = "☀️";
+                    }
+
+                    document.documentElement.setAttribute("data-theme", targetTheme);
+                    toggle.innerHTML = targetIcon;
+                    localStorage.setItem("theme", targetTheme);
+                    localStorage.setItem("theme-icon", targetIcon);
+                }
+            }
+        </script>
+		<title>Not Found | Bloggo</title>
+	</head>
+    <body>
+        <main class="container">
+
+<section>
+    <div class="center">
+        <div class="content">
+            <p>Oopsie daisy seems like the page you're looking for doesn't exist.</p>
+
+            <a href="http://127.0.0.1:5500/public/index.html" class="contrast">Take me to the Homepage</a>
+        </div>
+    </div>
+</section>

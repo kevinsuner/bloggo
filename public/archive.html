@@ -1,0 +1,115 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="robots" content="index, follow">
+        <meta name="keywords" content="bloggo, go, golang, ssg, markdown, frontmatter, simple, minimalist">
+        <meta name="description" content="As the name already suggests, this is the place where Bloggo will sort the available content chronologically, from oldest to newest.">
+        <meta name="author" content="itsksrof">
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://127.0.0.1:5500/public/archive.html" />
+        <meta property="og:title" content="Archive | Bloggo" />
+        <meta property="og:description" content="As the name already suggests, this is the place where Bloggo will sort the available content chronologically, from oldest to newest." />
+        <meta property="og:image" content="http://127.0.0.1:5500/public/assets/cover.png"/>
+        <meta name="twitter:title" content="Archive | Bloggo"/>
+        <meta name="twitter:description" content="As the name already suggests, this is the place where Bloggo will sort the available content chronologically, from oldest to newest."/>
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:image" content="http://127.0.0.1:5500/public/assets/cover.png"/>
+        
+        <link rel="canonical" href="http://127.0.0.1:5500/public/index.html">
+        <link rel="stylesheet" href="http://127.0.0.1:5500/public/css/pico.css">
+        <link rel="stylesheet" href="http://127.0.0.1:5500/public/css/style.css">
+        <link rel="icon" href="http://127.0.0.1:5500/public/assets/favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="http://127.0.0.1:5500/public/assets/favicon-32x32.png">
+        <link rel="apple-touch-icon" href="http://127.0.0.1:5500/public/assets/apple-touch-icon.png">
+        <script>
+            window.onload = () => {
+                var toggle = document.getElementById("theme-toggle");
+                var storedTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+                var storedIcon = localStorage.getItem("theme-icon") || (storedTheme === "dark" ? "☀️" : "🌙");
+                if (storedTheme) {
+                    document.documentElement.setAttribute("data-theme", storedTheme);
+                    toggle.innerHTML = storedIcon;
+                }
+
+                toggle.onclick = function() {
+                    var currentTheme = document.documentElement.getAttribute("data-theme");
+                    var targetTheme = "light";
+                    var targetIcon = "🌙";
+
+                    if (currentTheme === "light") {
+                        targetTheme = "dark";
+                        targetIcon = "☀️";
+                    }
+
+                    document.documentElement.setAttribute("data-theme", targetTheme);
+                    toggle.innerHTML = targetIcon;
+                    localStorage.setItem("theme", targetTheme);
+                    localStorage.setItem("theme-icon", targetIcon);
+                }
+            }
+        </script>
+		<title>Archive | Bloggo</title>
+	</head>
+    <body>
+        <main class="container">
+
+<section>
+    
+<nav>
+    <ul>
+        <li><a href="http://127.0.0.1:5500/public/index.html" class="contrast">Home</a></li>
+        <li><a href="http://127.0.0.1:5500/public/about.html" class="contrast">About</a></li>
+        <li><a href="http://127.0.0.1:5500/public/archive.html" class="contrast">Archive</a></li>
+    </ul>
+    <ul dir="rtl">
+        <li><a id="theme-toggle">🌙</a></li>
+    </ul>
+</nav>
+
+    <h1>Archive</h1>
+<p>As the name already suggests, this is the place where Bloggo will sort the available content chronologically, from oldest to newest.</p>
+
+</section>
+
+<section>
+    
+    <hgroup>
+        <h2>2023</h2>
+        
+        <ul>
+            <li><a href="http://127.0.0.1:5500/public/posts/markdown-syntax-guide.html" class="contrast">Markdown Syntax Guide</a></li>
+        </ul>
+        
+        <ul>
+            <li><a href="http://127.0.0.1:5500/public/posts/placeholder-article.html" class="contrast">Placeholder Article</a></li>
+        </ul>
+        
+        <ul>
+            <li><a href="http://127.0.0.1:5500/public/posts/yet-another-ssg.html" class="contrast">Yet Another Yogurt? Sorry SSG</a></li>
+        </ul>
+        
+    </hgroup>
+    
+</section> 
+
+            <section>
+                <small>
+                    Made by 
+                    <a href="https://github.com/itsksrof" class="contrast">Kevin Suñer</a> 
+                    &#183;
+                    Powered by
+                    <a href="https://github.com/itsksrof/bloggo" class="contrast">Bloggo</a> 
+                    &#183; 
+                    Code licensed 
+                    <a href="https://github.com/itsksrof/bloggo/blob/master/LICENSE.md" class="contrast">MIT</a>
+                </small>
+            </section>
+        </main>
+    </body>
+</html>
+

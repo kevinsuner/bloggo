@@ -1,0 +1,63 @@
+{{define "header"}}
+<!DOCTYPE html>
+<html lang="{{.Header.Meta.Lang}}">
+	<head>
+		<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="robots" content="{{.Header.Meta.Robots}}">
+        <meta name="keywords" content="{{.Header.Meta.Keywords}}">
+        <meta name="description" content="{{.Header.Meta.Description}}">
+        <meta name="author" content="{{.Header.Meta.Author}}">
+        <meta property="og:type" content="{{.Header.Meta.OGType}}" />
+        <meta property="og:url" content="{{.Header.OGURL}}" />
+        <meta property="og:title" content="{{.Header.Meta.Title}}" />
+        <meta property="og:description" content="{{.Header.Meta.Description}}" />
+        <meta property="og:image" content="{{.Header.BaseURL}}/public/assets/cover.png"/>
+        <meta name="twitter:title" content="{{.Header.Meta.Title}}"/>
+        <meta name="twitter:description" content="{{.Header.Meta.Description}}"/>
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:image" content="{{.Header.BaseURL}}/public/assets/cover.png"/>
+        {{if eq .Header.Meta.OGType "article"}}
+        <meta property="article:section" content="{{.Header.Meta.Section}}">
+        <meta property="article:published_time" content="{{.Header.Meta.PublishedTime}}"/>
+        <meta property="article:modified_time" content="{{.Header.Meta.ModifiedTime}}"/>
+        {{end}}
+        <link rel="canonical" href="{{.Header.CanonicalURL}}">
+        <link rel="stylesheet" href="{{.Header.BaseURL}}/public/css/pico.css">
+        <link rel="stylesheet" href="{{.Header.BaseURL}}/public/css/style.css">
+        <link rel="icon" href="{{.Header.BaseURL}}/public/assets/favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{.Header.BaseURL}}/public/assets/favicon-32x32.png">
+        <link rel="apple-touch-icon" href="{{.Header.BaseURL}}/public/assets/apple-touch-icon.png">
+        <script>
+            window.onload = () => {
+                var toggle = document.getElementById("theme-toggle");
+                var storedTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+                var storedIcon = localStorage.getItem("theme-icon") || (storedTheme === "dark" ? "☀️" : "🌙");
+                if (storedTheme) {
+                    document.documentElement.setAttribute("data-theme", storedTheme);
+                    toggle.innerHTML = storedIcon;
+                }
+
+                toggle.onclick = function() {
+                    var currentTheme = document.documentElement.getAttribute("data-theme");
+                    var targetTheme = "light";
+                    var targetIcon = "🌙";
+
+                    if (currentTheme === "light") {
+                        targetTheme = "dark";
+                        targetIcon = "☀️";
+                    }
+
+                    document.documentElement.setAttribute("data-theme", targetTheme);
+                    toggle.innerHTML = targetIcon;
+                    localStorage.setItem("theme", targetTheme);
+                    localStorage.setItem("theme-icon", targetIcon);
+                }
+            }
+        </script>
+		<title>{{.Header.Meta.Title}}</title>
+	</head>
+    <body>
+        <main class="container">
+{{end}}

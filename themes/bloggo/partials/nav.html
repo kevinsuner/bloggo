@@ -1,0 +1,12 @@
+{{define "nav"}}
+<nav>
+    <ul>
+        <li><a href="{{.Header.BaseURL}}/public/index.html" class="contrast">Home</a></li>
+        <li><a href="{{.Header.BaseURL}}/public/about.html" class="contrast">About</a></li>
+        <li><a href="{{.Header.BaseURL}}/public/archive.html" class="contrast">Archive</a></li>
+    </ul>
+    <ul dir="rtl">
+        <li><a id="theme-toggle">🌙</a></li>
+    </ul>
+</nav>
+{{end}}

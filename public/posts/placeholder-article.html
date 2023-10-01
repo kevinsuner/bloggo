@@ -1,0 +1,121 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="robots" content="index, follow">
+        <meta name="keywords" content="bloggo, go, golang, ssg, markdown, frontmatter, simple, minimalist">
+        <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae mollis enim. Curabitur quis elementum libero. Sed euismod est sit amet lectus aliquet lobortis. Donec dolor nulla, tempus et pellentesque eu, vulputate sit amet ex. Aenean at leo ex. Proin varius diam placerat mauris pretium, id mollis ex ullamcorper. Duis dictum tincidunt vehicula.">
+        <meta name="author" content="itsksrof">
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="http://127.0.0.1:5500/public/posts/placeholder-article.html" />
+        <meta property="og:title" content="Placeholder Article | Bloggo" />
+        <meta property="og:description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae mollis enim. Curabitur quis elementum libero. Sed euismod est sit amet lectus aliquet lobortis. Donec dolor nulla, tempus et pellentesque eu, vulputate sit amet ex. Aenean at leo ex. Proin varius diam placerat mauris pretium, id mollis ex ullamcorper. Duis dictum tincidunt vehicula." />
+        <meta property="og:image" content="http://127.0.0.1:5500/public/assets/cover.png"/>
+        <meta name="twitter:title" content="Placeholder Article | Bloggo"/>
+        <meta name="twitter:description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae mollis enim. Curabitur quis elementum libero. Sed euismod est sit amet lectus aliquet lobortis. Donec dolor nulla, tempus et pellentesque eu, vulputate sit amet ex. Aenean at leo ex. Proin varius diam placerat mauris pretium, id mollis ex ullamcorper. Duis dictum tincidunt vehicula."/>
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:image" content="http://127.0.0.1:5500/public/assets/cover.png"/>
+        
+        <meta property="article:section" content="posts">
+        <meta property="article:published_time" content="2023-09-27"/>
+        <meta property="article:modified_time" content="2023-09-27"/>
+        
+        <link rel="canonical" href="http://127.0.0.1:5500/public/index.html">
+        <link rel="stylesheet" href="http://127.0.0.1:5500/public/css/pico.css">
+        <link rel="stylesheet" href="http://127.0.0.1:5500/public/css/style.css">
+        <link rel="icon" href="http://127.0.0.1:5500/public/assets/favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="http://127.0.0.1:5500/public/assets/favicon-32x32.png">
+        <link rel="apple-touch-icon" href="http://127.0.0.1:5500/public/assets/apple-touch-icon.png">
+        <script>
+            window.onload = () => {
+                var toggle = document.getElementById("theme-toggle");
+                var storedTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+                var storedIcon = localStorage.getItem("theme-icon") || (storedTheme === "dark" ? "☀️" : "🌙");
+                if (storedTheme) {
+                    document.documentElement.setAttribute("data-theme", storedTheme);
+                    toggle.innerHTML = storedIcon;
+                }
+
+                toggle.onclick = function() {
+                    var currentTheme = document.documentElement.getAttribute("data-theme");
+                    var targetTheme = "light";
+                    var targetIcon = "🌙";
+
+                    if (currentTheme === "light") {
+                        targetTheme = "dark";
+                        targetIcon = "☀️";
+                    }
+
+                    document.documentElement.setAttribute("data-theme", targetTheme);
+                    toggle.innerHTML = targetIcon;
+                    localStorage.setItem("theme", targetTheme);
+                    localStorage.setItem("theme-icon", targetIcon);
+                }
+            }
+        </script>
+		<title>Placeholder Article | Bloggo</title>
+	</head>
+    <body>
+        <main class="container">
+
+<section>
+	
+<nav>
+    <ul>
+        <li><a href="http://127.0.0.1:5500/public/index.html" class="contrast">Home</a></li>
+        <li><a href="http://127.0.0.1:5500/public/about.html" class="contrast">About</a></li>
+        <li><a href="http://127.0.0.1:5500/public/archive.html" class="contrast">Archive</a></li>
+    </ul>
+    <ul dir="rtl">
+        <li><a id="theme-toggle">🌙</a></li>
+    </ul>
+</nav>
+
+	<h1>Placeholder Article</h1>
+<p>Mauris eget ligula nibh. Cras enim lorem, faucibus viverra maximus in, lobortis a turpis. Nullam tortor mi, volutpat et augue sed, dapibus lacinia massa. Curabitur sed justo suscipit, tristique nisl vel, vehicula sapien. Mauris sagittis turpis eu vestibulum porttitor. In mattis sem a mi porttitor, vel euismod massa ullamcorper. Donec tortor felis, eleifend nec dolor nec, scelerisque suscipit nulla. Integer sagittis velit ex, in venenatis leo dictum lacinia. In at ullamcorper est, accumsan ultricies nunc. Sed vulputate purus mauris, nec rutrum odio condimentum in.</p>
+<p>Etiam accumsan augue eu nunc porta, sit amet facilisis metus pharetra. Vestibulum non urna at massa semper molestie in non ex. Donec sed velit nec purus scelerisque posuere nec vitae neque. Morbi vel dolor massa. Vestibulum maximus, ex nec auctor molestie, libero elit condimentum purus, et bibendum leo justo sed dolor. Duis vel porttitor leo. Morbi finibus scelerisque faucibus. Ut viverra libero vel tincidunt maximus. Ut gravida eleifend massa, vestibulum accumsan quam faucibus ut.</p>
+<ol>
+<li>Etiam accumsan augue eu nunc porta</li>
+<li>Cras enim lorem</li>
+<li>Duis vel porttitor leo</li>
+<li>Integer sagittis velit ex</li>
+</ol>
+<p>Sed rhoncus tincidunt diam, non aliquam lorem tincidunt vel. In ut dignissim nulla. Fusce mollis est vitae dolor sodales, eu dapibus purus mattis. Maecenas sed maximus est, a finibus dui. Ut in vehicula tellus. Cras libero quam, porta vel odio in, pulvinar lacinia neque. Fusce sagittis imperdiet magna, ac molestie turpis aliquam laoreet.</p>
+<ol>
+<li>Maecenas sed maximus est</li>
+<li>Duis vel porttitor leo</li>
+<li>Cras placerat dictum nisi</li>
+<li>Integer sagittis velit ex</li>
+<li>Etiam accumsan augue eu nunc porta</li>
+</ol>
+<h2>Nullam tortor</h2>
+<p><img src="/public/assets/2.jpg" alt="Waterfall. October 1961, Litograph"></p>
+<h3>Duis vel porttitor leo viverra</h3>
+<p>Nulla sapien ex, maximus quis erat non, feugiat convallis lectus. Cras placerat dictum nisi, non pulvinar leo vulputate sit amet. Fusce sagittis sollicitudin euismod. Vestibulum lorem enim, hendrerit sed consectetur at, elementum vitae risus. Phasellus ac est vitae lacus euismod ultricies vitae sit amet diam. Praesent iaculis arcu libero, id iaculis ipsum iaculis luctus. Etiam dictum iaculis diam ut consectetur. Duis interdum dolor at lobortis vehicula. Nunc consectetur vulputate malesuada. Vestibulum et suscipit lorem, nec ultricies massa. <strong>In consequat lacus eu laoreet vehicula</strong>. Phasellus id massa est. Fusce eget pretium magna, nec ornare sapien. Nam sit amet ultricies urna. Etiam consequat tristique arcu, eget vulputate tellus sagittis vitae.</p>
+<p>Phasellus lobortis diam sed erat aliquet, a facilisis est gravida. Morbi in neque non enim elementum fringilla. Integer finibus lobortis bibendum. In hac habitasse platea dictumst. Fusce id faucibus metus. Vestibulum tincidunt lectus vitae viverra bibendum.</p>
+<p>Sed rhoncus tincidunt diam, non aliquam lorem tincidunt vel. In ut dignissim nulla. <strong>Fusce mollis</strong> est vitae dolor sodales, eu dapibus purus mattis. Maecenas sed maximus est, a finibus dui. Ut in vehicula tellus. Cras libero quam, porta vel odio in, pulvinar lacinia neque. <strong>Fusce sagittis</strong> imperdiet magna, ac molestie turpis aliquam laoreet.</p>
+<p>The image displayed above is a litography made by M.C. Escher you can find more in the <a href="https://mcescher.com/gallery/">M.C. Escher Gallery</a>.</p>
+
+	<mark>2023-09-27</mark>
+</section>
+
+            <section>
+                <small>
+                    Made by 
+                    <a href="https://github.com/itsksrof" class="contrast">Kevin Suñer</a> 
+                    &#183;
+                    Powered by
+                    <a href="https://github.com/itsksrof/bloggo" class="contrast">Bloggo</a> 
+                    &#183; 
+                    Code licensed 
+                    <a href="https://github.com/itsksrof/bloggo/blob/master/LICENSE.md" class="contrast">MIT</a>
+                </small>
+            </section>
+        </main>
+    </body>
+</html>
+

@@ -1,0 +1,15 @@
+{{define "index"}}
+{{template "header" .}}
+<section>
+    {{template "nav" .}}
+    {{.Content}}
+</section>
+
+<section>
+    {{range .Posts}}
+    <h2 style="margin-bottom: 0;"><a href="{{.URL}}" class="contrast">{{.Title}}</a> <mark style="font-size: 14px;">{{.PublishedTime}}</mark></h2>
+    <p>{{.Description}}</p>
+    {{end}}
+</section>
+{{template "footer" .}}
+{{end}}

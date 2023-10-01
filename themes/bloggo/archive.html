@@ -1,0 +1,21 @@
+{{define "archive"}}
+{{template "header" .}}
+<section>
+    {{template "nav" .}}
+    {{.Content}}
+</section>
+
+<section>
+    {{range $key, $val := .Archive}}
+    <hgroup>
+        <h2>{{$key}}</h2>
+        {{range $val}}
+        <ul>
+            <li><a href="{{.URL}}" class="contrast">{{.Title}}</a></li>
+        </ul>
+        {{end}}
+    </hgroup>
+    {{end}}
+</section> 
+{{template "footer" .}}
+{{end}}

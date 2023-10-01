@@ -1,0 +1,9 @@
+{{define "post"}}
+{{template "header" .}}
+<section>
+	{{template "nav" .}}
+	{{.Content}}
+	<mark>{{.Header.Meta.PublishedTime}}</mark>
+</section>
+{{template "footer" .}}
+{{end}}
