@@ -101,8 +101,17 @@ bloggo/
     post.html
 ```
 
-## Hosting
-Work in progress.
+## Deploying
+At the moment the only proven way to deploy Bloggo is through [Github Pages](https://pages.github.com/). This will surely change in the future as I try to deploy Bloggo in other services such as Netlify, Linode, etc...
+
+### Deploy with Github Pages
+Bloggo uses a custom [GitHub Action](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) located in [`.github/workflows`](https://github.com/itsksrof/bloggo/blob/master/.github/workflows/static.yml) to deploy to GitHub Pages, but, before you can start actually using it, you must tell your repo specifically to build your site that way. To do so you just have to:
+1. On Github, navigate to your site's repository
+2. Under your repository name, click **Settings**. If you cannot see the "Settings" tab, select the **•••** dropdown menu, then click **Settings**
+3. In the "Code and Automation" section of the sidebar, click **Pages**
+4. Under "Build and Deployment", under "Source", select **Github Actions**
+
+In case you want to build your own action, you're having some issues, or you just want to know more head to [Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) or [Using custom workflows with GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
 ## Contributing
 All contributions are extremely appreciated, even though the capabilities of Bloggo are intended to be just a few, that doesn't mean that there is no room for improvement, because there is, so if you find places where things can be improved don't hesitate and open a pull request or an issue, as long as things are under Bloggo's scope I will be delighted to work on them, or allow other contributors to do so.
