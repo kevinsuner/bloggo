@@ -2,6 +2,7 @@
 package main
 
 import (
+	"bloggo/render"
 	"errors"
 	"flag"
 	"fmt"
@@ -9,6 +10,7 @@ import (
 	"strings"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/spf13/viper"
 )
 
 const (
@@ -21,6 +23,13 @@ const (
 	PUBLIC_CSS_DIR    string = PUBLIC_DIR + "/css"
 )
 
+func readYAML() error {
+	viper.SetConfigName("bloggo")
+	viper.SetConfigType("yaml")
+	viper.AddConfigPath(".")
+	return viper.ReadInConfig()
+}
+
 func main() {
 	var baseURL string
 	var themeDir string
@@ -32,6 +41,43 @@ func main() {
 	flag.IntVar(&limit, "limit", 10, "--limit=10")
 	flag.BoolVar(&serve, "serve", false, "--serve")
 	flag.Parse()
+
+	if err := readYAML(); err != nil {
+		log.Fatalf("%s: %v\n", "failed to load yaml", err)
+	}
+
+	for _, page := range viper.GetStringSlice("pages") {
+		switch page {
+		case "index":
+			fns := make([]render.RendererOption, 0)
+			for _, key := range viper.AllKeys() {
+				if fn, ok := render.RendererFunctions[key]; ok {
+					if !strings.Contains(key, ".") {
+						fns = append(fns, fn)
+					}
+
+					if strings.HasPrefix(key, "index") {
+						fns = append(fns, fn)
+					}
+				}
+			}
+
+			fmt.Printf("%+v\n", render.New(fns...))
+		case "about":
+			println("unimplemented!")
+		case "archive":
+			println("unimplemented!")
+		case "404":
+			println("unimplemented!")
+		default:
+			log.Fatalln("not a supported page")
+		}
+	}
+
+	fmt.Println(viper.GetString("base-url"))
+	fmt.Println(viper.GetString("theme"))
+	fmt.Println(viper.GetStringSlice("pages"))
+	fmt.Println(viper.GetInt("index.posts.limit"))
 
 	var assetsDir string = fmt.Sprintf("%s/%s/%s", THEMES_DIR, themeDir, "assets")
 	var cssDir string = fmt.Sprintf("%s/%s/%s", THEMES_DIR, themeDir, "css")
