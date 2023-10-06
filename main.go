@@ -62,7 +62,7 @@ func main() {
 				}
 			}
 
-			fmt.Printf("%+v\n", render.New(fns...))
+			fmt.Printf("%+v\n", render.New(fns...).Render(page))
 		case "about":
 			println("unimplemented!")
 		case "archive":
@@ -73,11 +73,6 @@ func main() {
 			log.Fatalln("not a supported page")
 		}
 	}
-
-	fmt.Println(viper.GetString("base-url"))
-	fmt.Println(viper.GetString("theme"))
-	fmt.Println(viper.GetStringSlice("pages"))
-	fmt.Println(viper.GetInt("index.posts.limit"))
 
 	var assetsDir string = fmt.Sprintf("%s/%s/%s", THEMES_DIR, themeDir, "assets")
 	var cssDir string = fmt.Sprintf("%s/%s/%s", THEMES_DIR, themeDir, "css")
