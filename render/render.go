@@ -1,7 +1,10 @@
+// SPDX-License-Identifier: MIT
 package render
 
 import (
+	"bytes"
 	"errors"
+	"html/template"
 
 	"github.com/spf13/viper"
 )
@@ -29,7 +32,23 @@ func New(opts ...RendererOption) *Renderer {
 	return r
 }
 
-func (r *Renderer) Render() error {
+func (r *Renderer) Render(tplName string) error {
+	tpls, err := getTemplateFiles(r.Theme)
+	if err != nil {
+		return err
+	}
+
+	tpl, err := template.New(tplName).ParseFiles(tpls...)
+	if err != nil {
+		return err
+	}
+
+	var buf bytes.Buffer
+	if err := tpl.Execute(&buf, nil); err != nil {
+		return err
+	}
+
+	println(buf.String())
 	return nil
 }
 
