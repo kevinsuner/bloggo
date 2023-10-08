@@ -1,35 +1,35 @@
 <!-- SPDX-License-Identifier: MIT -->
 {{define "header"}}
 <!DOCTYPE html>
-<html lang="{{.Header.Meta.Lang}}">
+<html lang="{{.Lang}}">
 	<head>
 		<meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="robots" content="{{.Header.Meta.Robots}}">
-        <meta name="keywords" content="{{.Header.Meta.Keywords}}">
-        <meta name="description" content="{{.Header.Meta.Description}}">
-        <meta name="author" content="{{.Header.Meta.Author}}">
-        <meta property="og:type" content="{{.Header.Meta.OGType}}" />
-        <meta property="og:url" content="{{.Header.OGURL}}" />
-        <meta property="og:title" content="{{.Header.Meta.Title}}" />
-        <meta property="og:description" content="{{.Header.Meta.Description}}" />
-        <meta property="og:image" content="{{.Header.BaseURL}}/assets/cover.png"/>
-        <meta name="twitter:title" content="{{.Header.Meta.Title}}"/>
-        <meta name="twitter:description" content="{{.Header.Meta.Description}}"/>
+        <meta name="robots" content="{{.Meta.Robots}}">
+        <meta name="keywords" content="{{.Meta.Keywords}}">
+        <meta name="description" content="{{.Meta.Description}}">
+        <meta name="author" content="{{.Meta.Author}}">
+        <meta property="og:type" content="{{.Meta.Type}}" />
+        <meta property="og:url" content="{{.BaseURL}}/index.html" />
+        <meta property="og:title" content="{{.Meta.Title}}" />
+        <meta property="og:description" content="{{.Meta.Description}}" />
+        <meta property="og:image" content="{{.BaseURL}}/assets/cover.png"/>
+        <meta name="twitter:title" content="{{.Meta.Title}}"/>
+        <meta name="twitter:description" content="{{.Meta.Description}}"/>
         <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:image" content="{{.Header.BaseURL}}/assets/cover.png"/>
-        {{if eq .Header.Meta.OGType "article"}}
-        <meta property="article:section" content="{{.Header.Meta.Section}}">
-        <meta property="article:published_time" content="{{.Header.Meta.PublishedTime}}"/>
-        <meta property="article:modified_time" content="{{.Header.Meta.ModifiedTime}}"/>
+        <meta name="twitter:image" content="{{.BaseURL}}/assets/cover.png"/>
+        {{if eq .Meta.Type "article"}}
+        <meta property="article:section" content="{{.Meta.Section}}">
+        <meta property="article:published_time" content="{{.Meta.Published}}"/>
+        <meta property="article:modified_time" content="{{.Meta.Modified}}"/>
         {{end}}
-        <link rel="canonical" href="{{.Header.CanonicalURL}}">
-        <link rel="stylesheet" href="{{.Header.BaseURL}}/css/pico.css">
-        <link rel="stylesheet" href="{{.Header.BaseURL}}/css/style.css">
-        <link rel="icon" href="{{.Header.BaseURL}}/assets/favicon.ico">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{.Header.BaseURL}}/assets/favicon-32x32.png">
-        <link rel="apple-touch-icon" href="{{.Header.BaseURL}}/assets/apple-touch-icon.png">
+        <link rel="canonical" href="{{.BaseURL}}/index.html">
+        <link rel="stylesheet" href="{{.BaseURL}}/css/pico.css">
+        <link rel="stylesheet" href="{{.BaseURL}}/css/style.css">
+        <link rel="icon" href="{{.BaseURL}}/assets/favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{.BaseURL}}/assets/favicon-32x32.png">
+        <link rel="apple-touch-icon" href="{{.BaseURL}}/assets/apple-touch-icon.png">
         <script>
             window.onload = () => {
                 var toggle = document.getElementById("theme-toggle");
@@ -57,7 +57,7 @@
                 }
             }
         </script>
-		<title>{{.Header.Meta.Title}}</title>
+		<title>{{.Meta.Title}}</title>
 	</head>
     <body>
         <main class="container">

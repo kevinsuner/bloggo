@@ -17,54 +17,58 @@ Bloggo is a free and simplistic [static site generator](https://en.wikipedia.org
 ---
 
 ## Usage
-
 The following guide will start a local Fiber server at `http://127.0.0.1:5500/public`, will use the default theme provided with Bloggo, and will limit the amount of articles shown in the homepage to 20.
 
 1. Clone this repository
     ```bash
     git clone https://github.com/itsksrof/bloggo.git
     ```
-2. Go to the cloned repository directory.
+2. Go to the cloned repository directory
     ```bash
     cd /path/to/bloggo
     ```
-3. Run the following command and head to `http://127.0.0.1:5500/public` on your browser.
+3. Go to the `bloggo.yaml` file and set `base-url` and `test` values to the following
+    ```yaml
+    base-url: http://127.0.0.1:5500/public
+    test: true
+    ```
+4. Run the following command and head to `http://127.0.0.1:5500/public` on your browser
     ```bash
     # For Linux users
-    ./bin/bloggo-amd64-linux --serve
+    ./bin/bloggo-amd64-linux
     # For Windows users
-    ./bin/bloggo-amd64.exe --serve
+    ./bin/bloggo-amd64.exe
     # For MacOS users
-    ./bin/bloggo-amd64-darwin --serve
+    ./bin/bloggo-amd64-darwin
     ```
 
-### Parameters
+### Configuration
+The following configuration options can be set in the `bloggo.yaml` file.
 
-The following parameters can be used when executing the bloggo binary.
-
-| Name | Default | Required | Usage | Description |
-| -------- | ----------------------- | ----- | ---------------------------------- | ---------------------------------------- |
-| base-url | `http://127.0.0.1:5500/public` | False | `--base-url=http://127.0.0.1:5500/public` | The base URL used in meta-tags and links |
-| theme | `bloggo` | False | `--theme=bloggo` | The theme used across the site |
-| limit | `10` | False | `--limit=10` | The limit of articles shown in the homepage |
-| serve | `false` | False | `--serve` | Preview of the site using a server with Fiber |
+| Name | Required | Example | Description |
+| ---- | -------- | ----- | ----------- |
+| lang | true | `lang: "en"` | The default language of the site |
+| base-url | true | `base-url: "http://127.0.0.1:5500/public"` | The base URL used in meta-tags and links |
+| theme | true | `theme: "bloggo"` | The theme used across the site |
+| posts-limit | true |  `posts-limit: 10` | The limit of articles shown in the index page |
+| test | true | `test: false` | Preview of the site using a server with Fiber |
+| pages | true | `pages: ["index", "about", "archive", "404"]` | The pages that are going to be generated |
+| dirs | true | `dirs: ["assets", "css"]` | The directories that are going to be copied from the `theme` folder to the `public` folder |
 
 ### Frontmatter
-
-The following tags can be used at the top of each `.md` file like this:
+The following meta-tags can be used at the top of each `.md` file like this:
 ```yaml
 ---
-lang: "en"
 title: "Markdown Syntax Guide | Bloggo"
-raw_title: "Markdown Syntax Guide"
+raw-title: "Markdown Syntax Guide"
 description: "This article offers a sample of basic Markdown syntax that can be used in Bloggo content files, also it shows whether basic HTML elements are decorated with CSS in a Bloggo theme."
 keywords: "bloggo, go, golang, ssg, markdown, frontmatter, simple, minimalist"
 author: "itsksrof"
 robots: "index, follow"
-og_type: "article"
+type: "article"
 section: "posts"
-published_time: "2023-09-27"
-modified_time: "2023-09-27"
+published: "2023-09-27"
+modified: "2023-09-27"
 ---
 ```
 
@@ -72,18 +76,17 @@ modified_time: "2023-09-27"
 | ---- | -------- | ----- | ----------- |
 | lang | True | `lang: "es"` | The language of the page |
 | title | True | `title: "Home • Bloggo"` | The title of the page |
-| raw_title | Only in posts | `raw_title: "Home"` | The raw title of the page |
+| raw-title | Only in posts | `raw-title: "Home"` | The raw title of the page |
 | description | True | `description: "The description"` | The description of the page |
 | keywords | True | `keywords: "foo, bar, foobar"` | The keywords of the page |
 | author | True | `author: "itsksrof"` | The author of the page |
 | robots | True | `robots: "index, follow"` | The instructions for the search engine |
-| og_type | True | `og_type: "website"` | The type of the object for Open Graph |
+| type | True | `type: "website"` | The type of the object for Open Graph |
 | section | Only in posts | `section: "posts"` | The section in which the article belongs |
-| published_time | Only in posts | `published_time: "2023-09-30"` | The date in which the article was published |
-| modified_time | Only in posts | `modified_time: "2023-09-30"` | The date in which the article was modified |
+| published | Only in posts | `published: "2023-09-30"` | The date in which the article was published |
+| modified | Only in posts | `modified: "2023-09-30"` | The date in which the article was modified |
 
 ## Theming
-
 Given that Bloggo focuses on content over features, theming is very straightforward, as there is no possibility of generating more pages, unless you want to dig in the source code to do so. This is by design and I wish to keep it that way. Therefore to add a new theme, you only need to respect a certain file structure, this doesn't mean that you can't add new things, for example you've could create a navigation bar that included links to your social media, or a homepage with an avatar if you wish, so yes, you are certainly limited, but still you can do a lot of things within those bounds. If Bloggo doesn't suit your use-case there are wonderful alternatives like [Hugo](https://gohugo.io/) that will surely do.
 
 As a recommendation, you can use the bloggo theme file structure as a reference.
@@ -193,8 +196,8 @@ GOOS=darwin GOARCH=amd64 go build -o bin/bloggo-amd64-darwin .
 ## Credits
 
 Bloggo makes use or has taken inspiration from a variety of open source projects including:
-- [github.com/yuin/goldmark](https://github.com/yuin/goldmark)
-- [github.com/adrg/frontmatter](https://github.com/adrg/frontmatter)
-- [github.com/gofiber/fiber/v2](https://github.com/gofiber/fiber/v2)
-- [github.com/gohugoio/hugo](https://github.com/gohugoio/hugo)
-- [github.com/egonelbre/gophers](https://github.com/egonelbre/gophers)
+- [github.com/yuin/goldmark](github.com/yuin/goldmark)
+- [github.com/yuin/goldmark-meta](github.com/yuin/goldmark-meta)
+- [github.com/gofiber/fiber/v2](github.com/gofiber/fiber/v2)
+- [github.com/gohugoio/hugo](github.com/gohugoio/hugo)
+- [github.com/egonelbre/gophers](github.com/egonelbre/gophers)

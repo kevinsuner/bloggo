@@ -1,15 +1,14 @@
 ---
-lang: "en"
 title: "Placeholder Article | Bloggo"
-raw_title: "Placeholder Article"
+raw-title: "Placeholder Article"
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae mollis enim. Curabitur quis elementum libero. Sed euismod est sit amet lectus aliquet lobortis. Donec dolor nulla, tempus et pellentesque eu, vulputate sit amet ex. Aenean at leo ex. Proin varius diam placerat mauris pretium, id mollis ex ullamcorper. Duis dictum tincidunt vehicula."
 keywords: "bloggo, go, golang, ssg, markdown, frontmatter, simple, minimalist"
 author: "itsksrof"
 robots: "index, follow"
-og_type: "article"
+type: "article"
 section: "posts"
-published_time: "2023-09-27"
-modified_time: "2023-09-27"
+published: "2023-09-27"
+modified: "2023-09-27"
 ---
 # Placeholder Article
 Mauris eget ligula nibh. Cras enim lorem, faucibus viverra maximus in, lobortis a turpis. Nullam tortor mi, volutpat et augue sed, dapibus lacinia massa. Curabitur sed justo suscipit, tristique nisl vel, vehicula sapien. Mauris sagittis turpis eu vestibulum porttitor. In mattis sem a mi porttitor, vel euismod massa ullamcorper. Donec tortor felis, eleifend nec dolor nec, scelerisque suscipit nulla. Integer sagittis velit ex, in venenatis leo dictum lacinia. In at ullamcorper est, accumsan ultricies nunc. Sed vulputate purus mauris, nec rutrum odio condimentum in.

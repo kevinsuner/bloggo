@@ -7,16 +7,16 @@
 </section>
 
 <section>
-    {{range $key, $val := .Archive}}
+    {{range .Archive}}
     <hgroup>
-        <h2>{{$key}}</h2>
-        {{range $val}}
+        <h2>{{.ID}}</h2>
+        {{range .Posts}}
         <ul>
             <li><a href="{{.URL}}" class="contrast">{{.Title}}</a></li>
         </ul>
         {{end}}
     </hgroup>
     {{end}}
-</section> 
+</section>
 {{template "footer" .}}
 {{end}}

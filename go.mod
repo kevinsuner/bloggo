@@ -3,14 +3,13 @@ module bloggo
 go 1.21.0
 
 require (
-	github.com/adrg/frontmatter v0.2.0
 	github.com/gofiber/fiber/v2 v2.49.2
 	github.com/spf13/viper v1.17.0
 	github.com/yuin/goldmark v1.5.6
+	github.com/yuin/goldmark-meta v1.1.0
 )
 
 require (
-	github.com/BurntSushi/toml v0.3.1 // indirect
 	github.com/andybalholm/brotli v1.0.5 // indirect
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
 	github.com/google/uuid v1.3.1 // indirect
