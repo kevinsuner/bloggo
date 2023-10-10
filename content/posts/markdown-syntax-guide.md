@@ -1,15 +1,14 @@
 ---
-lang: "en"
 title: "Markdown Syntax Guide | Bloggo"
-raw_title: "Markdown Syntax Guide"
+raw-title: "Markdown Syntax Guide"
 description: "This article offers a sample of basic Markdown syntax that can be used in Bloggo content files, also it shows whether basic HTML elements are decorated with CSS in a Bloggo theme."
 keywords: "bloggo, go, golang, ssg, markdown, frontmatter, simple, minimalist"
 author: "itsksrof"
 robots: "index, follow"
-og_type: "article"
+type: "article"
 section: "posts"
-published_time: "2023-09-27"
-modified_time: "2023-09-27"
+published: "2023-09-28"
+modified: "2023-09-28"
 ---
 # Markdown Syntax Guide
 This article offers a sample of basic Markdown syntax that can be used in Bloggo content files, also it shows whether basic HTML elements are decorated with CSS in a Bloggo theme.

@@ -1,0 +1,7 @@
+lang: "en"
+base-url: "https://itsksrof.github.io/bloggo"
+theme: "bloggo"
+posts-limit: 10
+test: false
+pages: ["index", "about", "archive", "404"]
+dirs: ["assets", "css"]
