@@ -1,7 +1,7 @@
 lang: "en"
-base-url: "https://itsksrof.github.io/bloggo"
+base-url: "http://127.0.0.1:5500/public"
 theme: "bloggo"
 posts-limit: 10
-test: false
+test: true
 pages: ["index", "about", "archive", "404"]
 dirs: ["assets", "css"]
