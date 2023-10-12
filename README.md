@@ -5,7 +5,7 @@
 Bloggo is a free and simplistic [static site generator](https://en.wikipedia.org/wiki/Static_site_generator) for individuals that prioritize content over features, it lets you use custom themes by running a simple command, and uses [Go](https://go.dev), Markdown and Frontmatter to generate HTML pages that are optimized for performance and SEO.
 
 [![Go Version](https://img.shields.io/github/go-mod/go-version/itsksrof/bloggo)](https://github.com/itsksrof/bloggo/blob/master/go.mod)
-[![Pagespeed Insights](https://img.shields.io/badge/pagespeed-insights-green)](https://pagespeed.web.dev/report?url=https://itsksrof.github.io/bloggo/)
+[![Pagespeed Insights](https://img.shields.io/badge/pagespeed-insights-green)](https://pagespeed.web.dev/report?url=https://itsksrof.github.io/bloggo-demo/)
 [![License](https://img.shields.io/github/license/itsksrof/bloggo)](https://github.com/itsksrof/bloggo/blob/master/LICENSE)
 
 ---
@@ -17,7 +17,7 @@ Bloggo is a free and simplistic [static site generator](https://en.wikipedia.org
 ---
 
 ## Usage
-The following guide will start a local Fiber server at `http://127.0.0.1:5500/public`, will use the default theme provided with Bloggo, and will limit the amount of articles shown in the homepage to 20.
+The following guide will start a local Fiber server at `http://127.0.0.1:5500/public`, will use the default theme provided with Bloggo, and will limit the amount of articles shown in the homepage to 10.
 
 1. Clone this repository
     ```bash
@@ -27,12 +27,7 @@ The following guide will start a local Fiber server at `http://127.0.0.1:5500/pu
     ```bash
     cd /path/to/bloggo
     ```
-3. Go to the `bloggo.yaml` file and set `base-url` and `test` values to the following
-    ```yaml
-    base-url: http://127.0.0.1:5500/public
-    test: true
-    ```
-4. Run the following command and head to `http://127.0.0.1:5500/public` on your browser
+3. Run the following command and head to `http://127.0.0.1:5500/public` on your browser
     ```bash
     # For Linux users
     ./bin/bloggo-amd64-linux
@@ -48,7 +43,7 @@ The following configuration options can be set in the `bloggo.yaml` file.
 | Name | Required | Example | Description |
 | ---- | -------- | ----- | ----------- |
 | lang | true | `lang: "en"` | The default language of the site |
-| base-url | true | `base-url: "http://127.0.0.1:5500/public"` | The base URL used in meta-tags and links |
+| base-url | true | `base-url: "https://example.com"` | The base URL used in meta-tags and links |
 | theme | true | `theme: "bloggo"` | The theme used across the site |
 | posts-limit | true |  `posts-limit: 10` | The limit of articles shown in the index page |
 | test | true | `test: false` | Preview of the site using a server with Fiber |
@@ -74,17 +69,16 @@ modified: "2023-09-27"
 
 | Name | Required | Usage | Description |
 | ---- | -------- | ----- | ----------- |
-| lang | True | `lang: "es"` | The language of the page |
-| title | True | `title: "Home • Bloggo"` | The title of the page |
-| raw-title | Only in posts | `raw-title: "Home"` | The raw title of the page |
-| description | True | `description: "The description"` | The description of the page |
-| keywords | True | `keywords: "foo, bar, foobar"` | The keywords of the page |
-| author | True | `author: "itsksrof"` | The author of the page |
-| robots | True | `robots: "index, follow"` | The instructions for the search engine |
-| type | True | `type: "website"` | The type of the object for Open Graph |
-| section | Only in posts | `section: "posts"` | The section in which the article belongs |
-| published | Only in posts | `published: "2023-09-30"` | The date in which the article was published |
-| modified | Only in posts | `modified: "2023-09-30"` | The date in which the article was modified |
+| title | true | `title: "Home • Bloggo"` | The title of the page |
+| raw-title | only in posts | `raw-title: "Home"` | The raw title of the page |
+| description | true | `description: "The description"` | The description of the page |
+| keywords | true | `keywords: "foo, bar, foobar"` | The keywords of the page |
+| author | true | `author: "itsksrof"` | The author of the page |
+| robots | true | `robots: "index, follow"` | The instructions for the search engine |
+| type | true | `type: "website"` | The type of the object for Open Graph |
+| section | true | `section: "posts"` | The section in which the article belongs |
+| published | true | `published: "2023-09-30"` | The date in which the article was published |
+| modified | true | `modified: "2023-09-30"` | The date in which the article was modified |
 
 ## Theming
 Given that Bloggo focuses on content over features, theming is very straightforward, as there is no possibility of generating more pages, unless you want to dig in the source code to do so. This is by design and I wish to keep it that way. Therefore to add a new theme, you only need to respect a certain file structure, this doesn't mean that you can't add new things, for example you've could create a navigation bar that included links to your social media, or a homepage with an avatar if you wish, so yes, you are certainly limited, but still you can do a lot of things within those bounds. If Bloggo doesn't suit your use-case there are wonderful alternatives like [Hugo](https://gohugo.io/) that will surely do.
