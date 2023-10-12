@@ -102,7 +102,7 @@ bloggo/
 At the moment the only proven way to deploy Bloggo is through [Github Pages](https://pages.github.com/). This will surely change in the future as I try to deploy Bloggo in other services such as Netlify, Linode, etc...
 
 ### Deploy with Github Pages
-Bloggo uses a custom [GitHub Action](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) located in [`.github/workflows`](https://github.com/itsksrof/bloggo/blob/master/.github/workflows/static.yml) to deploy to GitHub Pages, but, before you can start actually using it, you must tell your repo specifically to build your site that way. To do so you just have to:
+Bloggo uses a custom [GitHub Action](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) located in [`action.yaml`](https://github.com/itsksrof/bloggo/blob/master/action.yaml) to deploy to GitHub Pages, but, before you can start actually using it, you must tell your repo specifically to build your site that way. To do so you just have to:
 1. On Github, navigate to your site's repository
 2. Under your repository name, click **Settings**. If you cannot see the "Settings" tab, select the **•••** dropdown menu, then click **Settings**
 3. In the "Code and Automation" section of the sidebar, click **Pages**
