@@ -76,9 +76,9 @@ modified: "2023-09-27"
 | author | true | `author: "itsksrof"` | The author of the page |
 | robots | true | `robots: "index, follow"` | The instructions for the search engine |
 | type | true | `type: "website"` | The type of the object for Open Graph |
-| section | true | `section: "posts"` | The section in which the article belongs |
-| published | true | `published: "2023-09-30"` | The date in which the article was published |
-| modified | true | `modified: "2023-09-30"` | The date in which the article was modified |
+| section | only in posts | `section: "posts"` | The section in which the article belongs |
+| published | only in posts | `published: "2023-09-30"` | The date in which the article was published |
+| modified | only in posts | `modified: "2023-09-30"` | The date in which the article was modified |
 
 ## Theming
 Given that Bloggo focuses on content over features, theming is very straightforward, as there is no possibility of generating more pages, unless you want to dig in the source code to do so. This is by design and I wish to keep it that way. Therefore to add a new theme, you only need to respect a certain file structure, this doesn't mean that you can't add new things, for example you've could create a navigation bar that included links to your social media, or a homepage with an avatar if you wish, so yes, you are certainly limited, but still you can do a lot of things within those bounds. If Bloggo doesn't suit your use-case there are wonderful alternatives like [Hugo](https://gohugo.io/) that will surely do.
