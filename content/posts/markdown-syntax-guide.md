@@ -32,10 +32,10 @@ Pellentesque quis rutrum velit. Etiam odio ipsum, scelerisque a nunc eu, blandit
 You can use the following syntax to include an image. Path of the image should be relative to the `public` folder.
 
 ```markdown
-![Matterhorn](/bloggo/assets/1.jpg)
+![Matterhorn](/public/assets/1.jpg)
 ```
 
-![Matterhorn](/bloggo/assets/1.jpg)
+![Matterhorn](/public/assets/1.jpg)
 
 You can also include images from external sources.
 
@@ -55,6 +55,19 @@ The blockquote element represents content that is quoted from another source, op
 > Talk is cheap. Show me the code.
 >
 > *Linus Torvalds*
+
+## Tables
+Tables aren't part of the core Markdown spec, but Bloggo supports them out-of-the-box.
+
+| Name | Age |
+| ---- | --- |
+| Bob | 27 |
+| Alice | 23 |
+
+### Markdown within tables
+| Italics | Bold | Code |
+| ------- | ---- | ---- |
+| *italics* | **bold** | `code` |
 
 ## Code Blocks
 
@@ -91,6 +104,18 @@ Use the backticks to refer to a `variable` within a sentence.
 - Dairy
     - Milk
     - Cheese
+
+### Task List
+- [ ] Fruit
+    - [x] Apple
+    - [ ] Orange
+    - [ ] Banana
+- [x] Dairy
+    - [x] Milk
+    - [x] Cheese
+
+## Other elements - del
+The MS-DOS operating system was written by ~~Bill Gates~~ Tim Paterson and was orginally named 86-DOS. 
 
 I've used [Markdown Syntax Guide](https://hugo-blog-awesome.netlify.app/posts/markdown-syntax/) from [Hugo Awesome Blog](https://github.com/hugo-sid/hugo-blog-awesome) as a benchmark to see how many features does Bloggo support.
 The beautiful image of the Matterhorn was made by [Chris Holgersson](https://unsplash.com/@chrisholgersson) from Unsplash.
