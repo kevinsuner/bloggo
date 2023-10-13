@@ -11,25 +11,25 @@
         <meta name="description" content="This article offers a sample of basic Markdown syntax that can be used in Bloggo content files, also it shows whether basic HTML elements are decorated with CSS in a Bloggo theme.">
         <meta name="author" content="itsksrof">
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://itsksrof.github.io/bloggo/index.html" />
+        <meta property="og:url" content="http://127.0.0.1:5500/public/index.html" />
         <meta property="og:title" content="Markdown Syntax Guide | Bloggo" />
         <meta property="og:description" content="This article offers a sample of basic Markdown syntax that can be used in Bloggo content files, also it shows whether basic HTML elements are decorated with CSS in a Bloggo theme." />
-        <meta property="og:image" content="https://itsksrof.github.io/bloggo/assets/cover.png"/>
+        <meta property="og:image" content="http://127.0.0.1:5500/public/assets/cover.png"/>
         <meta name="twitter:title" content="Markdown Syntax Guide | Bloggo"/>
         <meta name="twitter:description" content="This article offers a sample of basic Markdown syntax that can be used in Bloggo content files, also it shows whether basic HTML elements are decorated with CSS in a Bloggo theme."/>
         <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:image" content="https://itsksrof.github.io/bloggo/assets/cover.png"/>
+        <meta name="twitter:image" content="http://127.0.0.1:5500/public/assets/cover.png"/>
         
         <meta property="article:section" content="posts">
         <meta property="article:published_time" content="2023-09-28"/>
         <meta property="article:modified_time" content="2023-09-28"/>
         
-        <link rel="canonical" href="https://itsksrof.github.io/bloggo/index.html">
-        <link rel="stylesheet" href="https://itsksrof.github.io/bloggo/css/pico.css">
-        <link rel="stylesheet" href="https://itsksrof.github.io/bloggo/css/style.css">
-        <link rel="icon" href="https://itsksrof.github.io/bloggo/assets/favicon.ico">
-        <link rel="icon" type="image/png" sizes="32x32" href="https://itsksrof.github.io/bloggo/assets/favicon-32x32.png">
-        <link rel="apple-touch-icon" href="https://itsksrof.github.io/bloggo/assets/apple-touch-icon.png">
+        <link rel="canonical" href="http://127.0.0.1:5500/public/index.html">
+        <link rel="stylesheet" href="http://127.0.0.1:5500/public/css/pico.css">
+        <link rel="stylesheet" href="http://127.0.0.1:5500/public/css/style.css">
+        <link rel="icon" href="http://127.0.0.1:5500/public/assets/favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="http://127.0.0.1:5500/public/assets/favicon-32x32.png">
+        <link rel="apple-touch-icon" href="http://127.0.0.1:5500/public/assets/apple-touch-icon.png">
         <script>
             window.onload = () => {
                 var toggle = document.getElementById("theme-toggle");
@@ -66,9 +66,9 @@
 	
 <nav>
     <ul>
-        <li><a href="https://itsksrof.github.io/bloggo/index.html" class="contrast">Home</a></li>
-        <li><a href="https://itsksrof.github.io/bloggo/about.html" class="contrast">About</a></li>
-        <li><a href="https://itsksrof.github.io/bloggo/archive.html" class="contrast">Archive</a></li>
+        <li><a href="http://127.0.0.1:5500/public/index.html" class="contrast">Home</a></li>
+        <li><a href="http://127.0.0.1:5500/public/about.html" class="contrast">About</a></li>
+        <li><a href="http://127.0.0.1:5500/public/archive.html" class="contrast">Archive</a></li>
     </ul>
     <ul dir="rtl">
         <li><a id="theme-toggle">🌙</a></li>
@@ -90,9 +90,9 @@
 <p>Pellentesque quis rutrum velit. Etiam odio ipsum, scelerisque a nunc eu, blandit laoreet turpis. Nam molestie tincidunt arcu, eu pretium metus egestas vehicula. In id consectetur dui. Etiam dictum, mauris eu lobortis imperdiet, sapien ipsum fringilla ipsum, sit amet lobortis tortor nisl vitae dolor. Quisque porttitor tristique velit.</p>
 <h2>Image</h2>
 <p>You can use the following syntax to include an image. Path of the image should be relative to the <code>public</code> folder.</p>
-<pre><code class="language-markdown">![Matterhorn](/bloggo/assets/1.jpg)
+<pre><code class="language-markdown">![Matterhorn](/public/assets/1.jpg)
 </code></pre>
-<p><img src="/bloggo/assets/1.jpg" alt="Matterhorn"></p>
+<p><img src="/public/assets/1.jpg" alt="Matterhorn"></p>
 <p>You can also include images from external sources.</p>
 <pre><code class="language-markdown">![Ferrari](https://source.unsplash.com/random/640x410/?ferrari)
 </code></pre>
@@ -108,6 +108,43 @@
 <p>Talk is cheap. Show me the code.</p>
 <p><em>Linus Torvalds</em></p>
 </blockquote>
+<h2>Tables</h2>
+<p>Tables aren't part of the core Markdown spec, but Bloggo supports them out-of-the-box.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bob</td>
+<td>27</td>
+</tr>
+<tr>
+<td>Alice</td>
+<td>23</td>
+</tr>
+</tbody>
+</table>
+<h3>Markdown within tables</h3>
+<table>
+<thead>
+<tr>
+<th>Italics</th>
+<th>Bold</th>
+<th>Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>italics</em></td>
+<td><strong>bold</strong></td>
+<td><code>code</code></td>
+</tr>
+</tbody>
+</table>
 <h2>Code Blocks</h2>
 <pre><code class="language-go">package main
 
@@ -148,6 +185,24 @@ func main() {
 </ul>
 </li>
 </ul>
+<h3>Task List</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Fruit
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Apple</li>
+<li><input disabled="" type="checkbox"> Orange</li>
+<li><input disabled="" type="checkbox"> Banana</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> Dairy
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Milk</li>
+<li><input checked="" disabled="" type="checkbox"> Cheese</li>
+</ul>
+</li>
+</ul>
+<h2>Other elements - del</h2>
+<p>The MS-DOS operating system was written by <del>Bill Gates</del> Tim Paterson and was orginally named 86-DOS.</p>
 <p>I've used <a href="https://hugo-blog-awesome.netlify.app/posts/markdown-syntax/">Markdown Syntax Guide</a> from <a href="https://github.com/hugo-sid/hugo-blog-awesome">Hugo Awesome Blog</a> as a benchmark to see how many features does Bloggo support.
 The beautiful image of the Matterhorn was made by <a href="https://unsplash.com/@chrisholgersson">Chris Holgersson</a> from Unsplash.</p>
 
