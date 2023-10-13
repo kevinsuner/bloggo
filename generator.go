@@ -13,6 +13,7 @@ import (
 	"github.com/spf13/viper"
 	"github.com/yuin/goldmark"
 	meta "github.com/yuin/goldmark-meta"
+	"github.com/yuin/goldmark/extension"
 	"github.com/yuin/goldmark/parser"
 )
 
@@ -134,7 +135,7 @@ func WithMarkdown() GeneratorOption {
 
 		var buf bytes.Buffer
 		ctx := parser.NewContext()
-		if err := goldmark.New(goldmark.WithExtensions(meta.Meta)).
+		if err := goldmark.New(goldmark.WithExtensions(extension.GFM, meta.Meta)).
 			Convert(filebyte, &buf, parser.WithContext(ctx)); err != nil {
 			return err
 		}
