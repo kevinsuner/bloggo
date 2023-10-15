@@ -31,7 +31,7 @@
         <link rel="icon" type="image/png" sizes="32x32" href="{{.BaseURL}}/assets/favicon-32x32.png">
         <link rel="apple-touch-icon" href="{{.BaseURL}}/assets/apple-touch-icon.png">
         <script>
-            window.onload = () => {
+            document.addEventListener("DOMContentLoaded", () => {
                 var toggle = document.getElementById("theme-toggle");
                 var storedTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
                 var storedIcon = localStorage.getItem("theme-icon") || (storedTheme === "dark" ? "☀️" : "🌙");
@@ -55,7 +55,7 @@
                     localStorage.setItem("theme", targetTheme);
                     localStorage.setItem("theme-icon", targetIcon);
                 }
-            }
+            })
         </script>
 		<title>{{.Meta.Title}}</title>
 	</head>
