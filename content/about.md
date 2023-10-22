@@ -12,6 +12,8 @@ Written in Go, Bloggo is an open source static site generator available under th
 Bloggo makes use or has taken inspiration from a variety of open source projects including:
 - [github.com/yuin/goldmark](github.com/yuin/goldmark)
 - [github.com/yuin/goldmark-meta](github.com/yuin/goldmark-meta)
+- [github.com/spf13/cobra](github.com/spf13/cobra)
+- [github.com/spf13/viper](github.com/spf13/viper)
 - [github.com/gofiber/fiber/v2](github.com/gofiber/fiber/v2)
 - [github.com/gohugoio/hugo](github.com/gohugoio/hugo)
 - [github.com/egonelbre/gophers](github.com/egonelbre/gophers)
