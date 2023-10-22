@@ -17,24 +17,37 @@ Bloggo is a free and simplistic [static site generator](https://en.wikipedia.org
 ---
 
 ## Usage
-The following guide will start a local Fiber server at `http://127.0.0.1:5500/public`, will use the default theme provided with Bloggo, and will limit the amount of articles shown in the homepage to 10.
+The following guide will give you a fresh copy of Bloggo, an understanding of its commands, and a live preview of the site that you will be further developing.
 
 1. Clone this repository
     ```bash
-    git clone https://github.com/itsksrof/bloggo.git
+    git clone https://github.com/itsksrof/bloggo.git your-project-name
     ```
 2. Go to the cloned repository directory
     ```bash
-    cd /path/to/bloggo
+    cd /path/to/your-project-name
     ```
-3. Run the following command and head to `http://127.0.0.1:5500/public` on your browser
+3. Remove the `.git` folder from the cloned repository directory
+    ```bash
+    rm -rf .git
+    ```
+4. Run the `help` command to list all available Bloggo commands
     ```bash
     # For Linux users
-    ./bin/bloggo-amd64-linux
+    ./bin/bloggo-amd64-linux help
     # For Windows users
-    ./bin/bloggo-amd64.exe
+    ./bin/bloggo-amd64.exe help
     # For MacOS users
-    ./bin/bloggo-amd64-darwin
+    ./bin/bloggo-amd64-darwin help
+    ```
+5. Run the `test` command to spin a live preview of the site at `http://127.0.0.1:5500/public`
+    ```bash
+    # For Linux users
+    ./bin/bloggo-amd64-linux test
+    # For Windows users
+    ./bin/bloggo-amd64.exe test
+    # For MacOS users
+    ./bin/bloggo-amd64-darwin test
     ```
 
 ### Configuration
@@ -46,7 +59,6 @@ The following configuration options can be set in the `bloggo.yaml` file.
 | base-url | true | `base-url: "https://example.com"` | The base URL used in meta-tags and links |
 | theme | true | `theme: "bloggo"` | The theme used across the site |
 | posts-limit | true |  `posts-limit: 10` | The limit of articles shown in the index page |
-| test | true | `test: false` | Preview of the site using a server with Fiber |
 | pages | true | `pages: ["index", "about", "archive", "404"]` | The pages that are going to be generated |
 | dirs | true | `dirs: ["assets", "css"]` | The directories that are going to be copied from the `theme` folder to the `public` folder |
 
