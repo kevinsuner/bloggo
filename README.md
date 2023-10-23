@@ -34,20 +34,20 @@ The following guide will give you a fresh copy of Bloggo, an understanding of it
 4. Run the `help` command to list all available Bloggo commands
     ```bash
     # For Linux users
-    ./bin/bloggo-amd64-linux help
+    ./bin/bloggo-linux help
     # For Windows users
-    ./bin/bloggo-amd64.exe help
+    ./bin/bloggo-windows.exe help
     # For MacOS users
-    ./bin/bloggo-amd64-darwin help
+    ./bin/bloggo-darwin help
     ```
 5. Run the `test` command to spin a live preview of the site at `http://127.0.0.1:5500/public`
     ```bash
     # For Linux users
-    ./bin/bloggo-amd64-linux test
+    ./bin/bloggo--linux test
     # For Windows users
-    ./bin/bloggo-amd64.exe test
+    ./bin/bloggo-windows.exe test
     # For MacOS users
-    ./bin/bloggo-amd64-darwin test
+    ./bin/bloggo-darwin test
     ```
 
 ### Configuration
@@ -184,19 +184,20 @@ Now, to make a change to Bloggo's source:
 6. You are now ready to submit a PR based upon the new branch in your forked repository
 
 ### Building Bloggo with your changes
-Bloggo doesn't make use of any tools to build it (at the moment). You must run the following commands from the Bloggo working directory.
+
+Prerequisites to build Bloggo from source:
+- Go 1.19 or later
+- GNU Make
+- UPX (Ultimate Packer for eXecutables)
+
+Bloggo makes use of a simple Makefile to cross-compile to Windows, Linux and macOS. Run the following command from the Bloggo working directory.
 ```bash
 cd $HOME/src/bloggo
 ```
 
 To build Bloggo:
 ```bash
-# Linux 64-bit
-GOOS=linux GOARCH=amd64 go build -o bin/bloggo-amd64-linux .
-# Windows 64-bit
-GOOS=windows GOARCH=amd64 go build -o bin/bloggo-amd64.exe .
-# MacOS 64-bit
-GOOS=darwin GOARCH=amd64 go build -o bin/bloggo-amd64-darwin .
+make all
 ```
 
 ## Credits
