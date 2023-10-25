@@ -334,8 +334,12 @@ func WithPostsArchive() GeneratorOption {
 			return archive[j].ID < archive[i].ID
 		})
 
-		g.Archive = archive[:len(archive)-1]
+		if len(archive) > 1 {
+			g.Archive = archive[:len(archive)-1]
+			return nil
+		}
 
+		g.Archive = archive
 		return nil
 	}
 }
