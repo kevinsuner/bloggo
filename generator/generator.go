@@ -242,7 +242,7 @@ func WithPostsArchive() GeneratorOption {
 		}
 
 		var i int
-		archive := make([]Archive, len(files)-1)
+		archive := make([]Archive, len(files))
 		for _, file := range files {
 			filename, filebyte, err := GetFileData(file)
 			if err != nil {
@@ -334,7 +334,7 @@ func WithPostsArchive() GeneratorOption {
 			return archive[j].ID < archive[i].ID
 		})
 
-		g.Archive = archive
+		g.Archive = archive[:len(archive)-1]
 
 		return nil
 	}
