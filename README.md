@@ -155,7 +155,7 @@ Fixes #1234
 ```
 
 ### Fetching the source from Github
-Bloggo uses the Go Modules support built into Go 1.11 to build. The easiest is to clone Hugo in a directory outside of `GOPATH`, as in the following example:
+Bloggo uses the Go Modules support built into Go 1.11 to build. The easiest is to clone Bloggo in a directory outside of `GOPATH`, as in the following example:
 ```bash
 mkdir $HOME/src
 cd $HOME/src
