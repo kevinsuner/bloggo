@@ -4,9 +4,8 @@
 
 Bloggo is a free and simplistic [static site generator](https://en.wikipedia.org/wiki/Static_site_generator) for individuals that prioritize content over features, it lets you use custom themes by running a simple command, and uses [Go](https://go.dev), Markdown and Frontmatter to generate HTML pages that are optimized for performance and SEO.
 
-[![Go Version](https://img.shields.io/github/go-mod/go-version/itsksrof/bloggo)](https://github.com/itsksrof/bloggo/blob/master/go.mod)
-[![Pagespeed Insights](https://img.shields.io/badge/pagespeed-insights-green)](https://pagespeed.web.dev/report?url=https://itsksrof.github.io/bloggo-demo/)
-[![License](https://img.shields.io/github/license/itsksrof/bloggo)](https://github.com/itsksrof/bloggo/blob/master/LICENSE)
+[![Go Version](https://img.shields.io/github/go-mod/go-version/kevinsuner/bloggo)](https://github.com/kevinsuner/bloggo/blob/master/go.mod)
+[![License](https://img.shields.io/github/license/kevinsuner/bloggo)](https://github.com/kevinsuner/bloggo/blob/master/LICENSE)
 
 ---
 
@@ -21,7 +20,7 @@ The following guide will give you a fresh copy of Bloggo, an understanding of it
 
 1. Clone this repository
     ```bash
-    git clone https://github.com/itsksrof/bloggo.git your-project-name
+    git clone https://github.com/kevinsuner/bloggo.git your-project-name
     ```
 2. Go to the cloned repository directory
     ```bash
@@ -70,7 +69,7 @@ title: "Markdown Syntax Guide | Bloggo"
 raw-title: "Markdown Syntax Guide"
 description: "This article offers a sample of basic Markdown syntax that can be used in Bloggo content files, also it shows whether basic HTML elements are decorated with CSS in a Bloggo theme."
 keywords: "bloggo, go, golang, ssg, markdown, frontmatter, simple, minimalist"
-author: "itsksrof"
+author: "kevinsuner"
 robots: "index, follow"
 type: "article"
 section: "posts"
@@ -85,7 +84,7 @@ modified: "2023-09-27"
 | raw-title | only in posts | `raw-title: "Home"` | The raw title of the page |
 | description | true | `description: "The description"` | The description of the page |
 | keywords | true | `keywords: "foo, bar, foobar"` | The keywords of the page |
-| author | true | `author: "itsksrof"` | The author of the page |
+| author | true | `author: "kevinsuner"` | The author of the page |
 | robots | true | `robots: "index, follow"` | The instructions for the search engine |
 | type | true | `type: "website"` | The type of the object for Open Graph |
 | section | only in posts | `section: "posts"` | The section in which the article belongs |
@@ -114,7 +113,7 @@ bloggo/
 At the moment the only proven way to deploy Bloggo is through [Github Pages](https://pages.github.com/). This will surely change in the future as I try to deploy Bloggo in other services such as Netlify, Linode, etc...
 
 ### Deploy with Github Pages
-Bloggo uses a custom [GitHub Action](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) located in [`action.yaml`](https://github.com/itsksrof/bloggo/blob/master/action.yaml) to deploy to GitHub Pages, but, before you can start actually using it, you must tell your repo specifically to build your site that way. To do so you just have to:
+Bloggo uses a custom [GitHub Action](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) located in [`action.yaml`](https://github.com/kevinsuner/bloggo/blob/master/action.yaml) to deploy to GitHub Pages, but, before you can start actually using it, you must tell your repo specifically to build your site that way. To do so you just have to:
 1. On Github, navigate to your site's repository
 2. Under your repository name, click **Settings**. If you cannot see the "Settings" tab, select the **•••** dropdown menu, then click **Settings**
 3. In the "Code and Automation" section of the sidebar, click **Pages**
@@ -159,7 +158,7 @@ Bloggo uses the Go Modules support built into Go 1.11 to build. The easiest is t
 ```bash
 mkdir $HOME/src
 cd $HOME/src
-git clone https://github.com/itsksrof/bloggo.git
+git clone https://github.com/kevinsuner/bloggo.git
 cd bloggo
 ```
 
