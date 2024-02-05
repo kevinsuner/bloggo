@@ -6,7 +6,7 @@ require (
 	github.com/gofiber/fiber/v2 v2.51.0
 	github.com/spf13/cobra v1.8.0
 	github.com/spf13/viper v1.18.2
-	github.com/yuin/goldmark v1.6.0
+	github.com/yuin/goldmark v1.7.0
 	github.com/yuin/goldmark-meta v1.1.0
 )
 
